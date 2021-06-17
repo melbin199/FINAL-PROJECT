@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: -apple-system,'avenir next',avenir,roboto,noto,ubuntu,'helvetica neue',helvetica,arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  background-color: #FF851B;
+ background: rgba(0, 0, 0, 0.71);
+  color: #ff0a80 !important;
+
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.registration {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-top: 24px;
+}
+
+.registration-form {
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+  padding: 24px 44px;
+  background-color: #f9f9f9;
+  max-width: 500px;
+}
+
+.registration-form input[type="text"], .registration-form input[type="password"] {
+  display: inline-block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.registration-form input[type="submit"] {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.15s all ease-in-out;
+}
+
+.registration-form input[type="submit"]:hover {
+  background-color: #0066c0;
+}
+
+.password-conditions {
+  padding-left: 0;
+}
+
+.password-condition__item {
+  display: block;
+}
+
+.password-condition__item .text {
+  margin-bottom: 8px;
+}
+
+.password-condition__item .text:before {
+  width: 20px;
+  display: inline-block;
+  transition: 0.15s all ease-in-out;
+}
+
+.password-condition__item--success .text:before {
+  content: "\2713 ";
+  color: #2ECC40;
+}
+
+.password-condition__item--failure .text:before {
+  content: "\292B ";
+  color: #FF4136;
+}

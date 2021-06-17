@@ -1,0 +1,96 @@
+<style>
+  .button_delete {
+    background-image: url('../../../media/images/delete.png');
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+
+  .button_add {
+    background-image: url('../../../media/images/add.png');
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+
+  td {
+    padding: 2px;
+  }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<table style="border: 1px solid black; background: #ccc;" id="tbl">
+  <thead>
+    <tr>
+      <td>Input 1</td>
+      <td>Input 2</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" name="input1" /></td>
+      <td><input type="text" name="input2" /></td>
+      <td>
+        <button title="Remove" type="button" class="button_delete" name="button_delete[]">&nbsp;</button>
+      </td>
+      <td>
+        <button title="Add" type="button" class="button_add" name="add_row">&nbsp;</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+$(function() {
+  // First, make sure if only one row that it does not have 
+  // a delete button.
+  if ($('#tbl >tbody>tr').length === 1) {
+    $('#tbl >tbody>tr').each(function(){
+      $(this).find(".button_delete").hide();
+    });
+  }
+
+  // Response to a row add event
+  $("button[type='button'][name^='add_row']").on("click", function() {
+    $('#tbl tbody>tr:last').clone(true).insertAfter('#tbl tbody>tr:last');
+    // reset out fields on newly inserted row so it does not retain last row's values
+    $("#tbl tbody>tr:last").removeAttr('id');
+    $("#tbl tbody>tr:last input[type=text]").each(function() {$(this).val('');}); 
+    $("#tbl tbody>tr:last input[type=hidden]").each(function() {$(this).val(0);});
+    $("#tbl tbody>tr:last input[type=checkbox]").each(function() {$(this).attr('checked', false);}); 
+    $("#tbl tbody>tr:last select").each(function() {$(this).prop('selectedIndex',0);}); 
+    $("#tbl tbody>tr:last button[name^=button_delete]").each(function() {$(this).show();});
+    // hide + button on all but last row
+    $('#tbl >tbody>tr').not(':last').each(function() {
+      $(this).find(".button_add").hide();
+    });
+
+    return false;
+  });
+
+  // respond to a delete row event
+  $("button[type='button'][name^='button_delete']").on("click", function() {
+    $(this).closest('tr').remove();
+    $('#tbl >tbody>tr').not(':last').each(function() {
+      $(this).find(".button_add").hide();
+    });
+    $('#tbl >tbody>tr:last').each(function() {
+      $(this).find(".button_add").show();
+    });
+
+    // Only one row left, hide the delete button
+    if ($('#tbl >tbody>tr').length === 1) {
+      $('#tbl >tbody>tr').each(function(){
+        $(this).find(".button_delete").hide();
+      });
+    }
+
+    return false;
+  });
+});
+</script>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .box-title{
+  font-weight:bold;
+}
+.heading-row td{
+  font-weight:bold;
+  text-align:center;
+  border-bottom:solid 1px red;
+}
+.total-row td{
+  font-weight:bold;
+}
+.v-row td{
+  border:none;
+}
+@media print{
+  button .print-btn{
+    display:none;
+  }
+}
+    </style>
+    
+</head>
+<body>
+</html><div class="container-fluid">
+  <div id="bill-display">
+    <!-- ----- HEADER ---- -->
+    <table class="table table-bordered">
+      <caption class="text-center">TAX INVOICE<br>JOY RAM AGENCY<br>SABROOM, SOUTH TRIPURA<br>HELLO:- ANUP -1234567890.(Please call back)<br>GSTIN:- 16ARJPC8661K1
+        
+       
+      </caption>
+      <tr>
+        <td colspan="5" rowspan="2">
+          <div class="box-title text-center">
+            BILLING ADDRESS
+          </div>
+          
+           <div class="box-title text-center">
+          Party Name :--- <span id="comp-cst-no">12345</span><br>     Address:-------- <span id="comp-cst-no">12345</span><br>      Mob :--------------<span id="comp-cst-no">12345</span><br>      
+             GSTIN:----------- <span id="comp-cst-no">12345</span>
+          
+          </div>
+        </td>
+        <td colspan="5" rowspan="2">
+          <div class="text-center">
+            SHIPPING ADDRESS
+          </div>
+          
+           <div class=" text-center">
+           <span id="comp-cst-no">12345</span><br> 
+             <span id="comp-cst-no">12345</span><br>
+             <span id="comp-cst-no">12345</span><br>
+          
+          </div>
+        </td>
+        <td colspan="4"><div class="text-center" >
+            INVOICE DETAILS
+          </div>
+          <div class="box-title text-center">
+          Invoice No :--- <span id="comp-cst-no">12345</span><br>      Invoice Date :- <span id="comp-cst-no">12345</span><br>      Salesman :----- <span id="comp-cst-no">12345</span><br>      Beat :------------- <span id="comp-cst-no">12345</span>
+          
+          </div>
+          
+        </td>
+       
+      </tr>
+      
+     
+      <tr></tr><tr></tr>
+      <!-- ----- BODY ---- -->
+      <tr class="heading-row v-row">
+        <td>Sr<br>No.</td>
+        <td>ITEM DESCRIPTION </td>
+        <td>HSN Code</td>
+        <td>MRP</td>
+        <td>RATE CASE</td>
+        <td>PCS</td>
+        <td>GR.AMT</td>
+        <td>DISC AMT</td>
+        <td>T.VALUE</td>
+        <td>CGST%</td>
+        <td>CGST AMT</td>
+        <td>SGST%</td>
+         <td>SGST AMT</td>
+        <td>NET AMT</td>
+        
+      </tr>
+      <tr class="v-row">
+        <td>1</td>
+        <td>Metal Screw Ph Combination</td>
+        <td></td>
+        <td class="text-right">237.00 Kgs</td>
+        <td class="text-right">110.00</td>
+        <td>Kg</td>
+        <td class="text-right">26070.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr class="v-row">
+        <td>1</td>
+        <td>Metal Screw Ph Combination</td>
+        <td></td>
+        <td class="text-right">237.00 Kgs</td>
+        <td class="text-right">110.00</td>
+        <td>Kg</td>
+        <td class="text-right">26070.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr class="v-row">
+        <td>1</td>
+        <td>Metal Screw Ph Combination</td>
+        <td></td>
+        <td class="text-right">237.00 Kgs</td>
+        <td class="text-right">110.00</td>
+        <td>Kg</td>
+        <td class="text-right">26070.00</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr class="total-row v-row">
+        <td colspan="3" class="text-right">Total</td>
+        <td class="text-right">711.00 Kgs</td>
+        <td></td>
+        <td></td>
+        <td class="text-right">78210.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <!-- ----- FOOTER ---- -->
+      <tr>
+        <td colspan="2">
+          <div class="box-content">PAGE No. </div></td>
+        <td colspan="3">
+          <div class="box-title">Page Total =>></div>
+        
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <h5>Remarks</h5><br><br><br><br>
+          
+          In Words : <span id="comp-vat-tin">sgsggdggdgdgdgd</span><br>
+          
+         
+        </td>
+        <td colspan="7">
+          <div class="box-title text-right">
+           Total Gross Amt : <span id="comp-cst-no">12345</span><br>
+            Total Disc Amt : <span id="comp-cst-no">12345</span><br>
+            Taxable Value : <span id="comp-cst-no">12345</span><br>
+             CGST Amt : <span id="comp-cst-no">12345</span><br>
+            SGST Amt : <span id="comp-cst-no">12345</span><br>
+            Total Invoice Amount : <span id="comp-cst-no">12345</span><br>
+          </div>
+        </td>
+      </tr>
+       <tr>
+        <td colspan="7">
+          <div class="box-content text-left">Party Signature & Stamp </div></td>
+        <td colspan="7">
+          <div class="box-title text-right">For Joy Ram Agency</div>
+        
+     
+      </tr>
+      
+    </table>
+  </div>
+  <button class="btn btn-default .print-btn" onclick="jsvascript:window.print()">Print Invoice</button>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
